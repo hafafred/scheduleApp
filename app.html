@@ -75,7 +75,10 @@
             // Call the Edge Function with credentials
             fetch('https://bkudrqdtxtolvawmwhli.supabase.co/functions/v1/super-service', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJrdWRycWR0eHRvbHZhd213aGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzOTMxMDcsImV4cCI6MjA3MTk2OTEwN30.N12e_XFs0oTIQr8WZWsLcDfwqynHxnS9uoNBcDUp8DQ'
+                },
                 body: JSON.stringify({ email, password })
             })
             .then(response => {
