@@ -72,12 +72,9 @@
             startBtn.textContent = 'Starting...';
             startBtn.disabled = true;
             
-            // Test with GET first
+            // Test without auth header first
             fetch('https://bkudrqdtxtolvawmwhli.supabase.co/functions/v1/super-service', {
-                method: 'GET',
-                headers: {
-                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJrdWRycWR0eHRvbHZhd213aGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzOTMxMDcsImV4cCI6MjA3MTk2OTEwN30.N12e_XFs0oTIQr8WZWsLcDfwqynHxnS9uoNBcDUp8DQ'
-                }
+                method: 'GET'
             })
             .then(response => {
                 console.log('Response status:', response.status);
